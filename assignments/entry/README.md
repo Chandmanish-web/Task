@@ -92,7 +92,7 @@ See detailed rubric: [resources/EVALUATION.md](resources/EVALUATION.md)
 
 ### How to Submit
 
-**Email to**: `[hiring-email@company.com]`
+**Email to**: `raplsfsolutions@gmail.com`
 
 **Subject**: `ERPNext Entry Level Assignment - [Your Name]`
 
@@ -143,7 +143,7 @@ Attachments:
 
 ## Getting Help
 
-**Email**: [support-email@company.com]  
+**Email**: raplsfsolutions@gmail.com  
 **Response Time**: Within 24 hours (business days)
 
 **Include in your question**:

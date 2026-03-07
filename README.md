@@ -148,7 +148,7 @@ Follow the tasks in [assignments/entry/README.md](assignments/entry/README.md)
 
 ### How to Submit
 
-Email to: `[]`
+Email to: `raplsfsolutions@gmail.com`
 
 **Subject**: `ERPNext Entry Level Assignment - [Your Name]`
 

@@ -164,7 +164,7 @@ Follow: [assignments/entry/README.md](assignments/entry/README.md)
 
 ### Submission Email
 
-**To**: [hiring-email@company.com]  
+**To**: raplsfsolutions@gmail.com  
 **Subject**: `ERPNext Entry Level Assignment - [Candidate Name]`  
 **Deadline**: 3 days from assignment receipt
 
