@@ -10,7 +10,7 @@ Create a Google Sheet or Excel file with the following columns:
 A: Candidate Name
 B: Email
 C: Phone
-D: Submission Date
+D: Submission Datehttps://github.com/YOUR_USERNAME/erpnext-developer-tasks
 E: Repository URL
 F: PR Link
 G: Initial Review Status (Missing Items / Accepted)
