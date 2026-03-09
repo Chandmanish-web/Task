@@ -26,3 +26,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# External repositories (don't commit cloned repos)
+frappe_docker/
