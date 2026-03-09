@@ -35,23 +35,30 @@ function App() {
       setTasks(response.data);
     } catch (error) {
       console.error('Error fetching tasks:', error);
-      // if backend unreachable, keep existing local tasks
-      alert('Could not reach server; working offline with saved tasks.');
+      // if backend unreachable, keep existing local tasks - no alert needed
     }
   };
 
   const addTask = async (text) => {
+    const taskId = Date.now().toString(); // Local ID for offline support
+    const newTask = { _id: taskId, text, completed: false };
+    setTasks([...tasks, newTask]);
+    
     try {
       const response = await axios.post('http://localhost:5000/api/tasks', { text });
-      setTasks([...tasks, response.data]);
+      setTasks(prev => prev.map(t => t._id === taskId ? response.data : t));
     } catch (error) {
       console.error('Error adding task:', error);
+      // Task remains locally saved, will sync when server is available
     }
   };
 
   const toggleTask = async (id) => {
+    const task = tasks.find(t => t._id === id);
+    const updated = { ...task, completed: !task.completed };
+    setTasks(tasks.map(t => t._id === id ? updated : t));
+    
     try {
-      const task = tasks.find(t => t._id === id);
       const response = await axios.put(`http://localhost:5000/api/tasks/${id}`, {
         completed: !task.completed
       });
@@ -62,9 +69,10 @@ function App() {
   };
 
   const deleteTask = async (id) => {
+    setTasks(tasks.filter(t => t._id !== id));
+    
     try {
       await axios.delete(`http://localhost:5000/api/tasks/${id}`);
-      setTasks(tasks.filter(t => t._id !== id));
     } catch (error) {
       console.error('Error deleting task:', error);
     }
@@ -72,9 +80,10 @@ function App() {
 
   const clearCompleted = async () => {
     if (!window.confirm('Are you sure you want to remove all completed tasks?')) return;
+    setTasks(tasks.filter(t => !t.completed));
+    
     try {
       await axios.delete('http://localhost:5000/api/tasks');
-      setTasks(tasks.filter(t => !t.completed));
     } catch (error) {
       console.error('Error clearing completed tasks:', error);
     }
