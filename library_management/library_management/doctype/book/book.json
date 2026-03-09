@@ -1,0 +1,143 @@
+{
+ "doctype": "DocType",
+ "name": "Book",
+ "module": "Library Management",
+ "autoname": "naming_series:BOOK-.#####",
+ "naming_rule": "By \"Naming Series\" field",
+ "creation": "2024-01-01 00:00:00.000000",
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "owner": "Administrator",
+ "docstatus": 0,
+ "idx": 0,
+ "is_submittable": 0,
+ "is_child_table": 0,
+ "is_single": 0,
+ "is_table": 0,
+ "editable_grid": 1,
+ "track_changes": 1,
+ "allow_copy": 0,
+ "allow_import": 0,
+ "allow_rename": 0,
+ "hide_toolbar": 0,
+ "hide_name_in_link": 0,
+ "allow_events_in_timeline": 0,
+ "allow_auto_repeat": 0,
+ "quick_entry": 0,
+ "track_seen": 0,
+ "track_views": 0,
+ "custom": 0,
+ "beta": 0,
+ "has_web_view": 0,
+ "email_append_to": 0,
+ "sender_field": null,
+ "subject_field": null,
+ "event_tracking": 0,
+ "engine": "InnoDB",
+ "fields": [
+  {
+   "fieldname": "book_id",
+   "fieldtype": "Data",
+   "label": "Book ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Book Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "author",
+   "fieldtype": "Data",
+   "label": "Author",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "isbn",
+   "fieldtype": "Data",
+   "label": "ISBN",
+   "unique": 1
+  },
+  {
+   "fieldname": "publisher",
+   "fieldtype": "Data",
+   "label": "Publisher"
+  },
+  {
+   "fieldname": "publication_year",
+   "fieldtype": "Int",
+   "label": "Publication Year"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Fiction\nNon-Fiction\nScience\nTechnology\nHistory\nBiography\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "total_copies",
+   "fieldtype": "Int",
+   "label": "Total Copies",
+   "default": "1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "available_copies",
+   "fieldtype": "Int",
+   "label": "Available Copies",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Available\nChecked Out\nMaintenance",
+   "default": "Available",
+   "in_list_view": 1
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "import": 0,
+   "set_user_permissions": 0,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  },
+  {
+   "role": "Librarian",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0,
+   "report": 1,
+   "export": 1,
+   "import": 0,
+   "set_user_permissions": 0,
+   "share": 1,
+   "print": 1,
+   "email": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
